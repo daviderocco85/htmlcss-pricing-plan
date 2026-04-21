@@ -4,7 +4,7 @@ HTML/CCS pricing plan page, capable of adapting to different screen resolutions.
 
 # Demo Live
 
-[**Click here for demo**]
+[**Click here for demo**](https://daviderocco85.github.io/htmlcss-pricing-plan/)
 
 
 # Target 
