@@ -1,0 +1,294 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 20px;
+  min-width: 320px;
+  font-family: sans-serif;
+}
+
+/* container */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+ 
+}
+
+/* flex-columns */
+
+.flex-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+/* on mobile first*/
+.flex-columns .card {
+    flex: 1 1 100%;
+}
+/* h2 and p style*/
+.card.heading h2 {
+   
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.card.heading p {
+
+  font-size: 12px;
+  color: grey;
+}
+
+
+.card.heading {
+  padding-bottom: 20px;
+}
+
+/* switch button setting*/
+.card.switch {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 8px;  
+  padding-bottom: 40px;
+}
+
+.card.switch button.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  color:gray;
+  gap: 4px;
+   
+}
+
+
+.card.switch button.switch>i{
+  color:gray;
+  font-size: 18px;
+
+}
+
+.card.switch button.switch.active>i{
+  font-size: 18px;
+  color:black;
+}
+
+
+/*card main generic settings*/
+
+.card.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  
+}
+
+
+
+.card.main h2{
+ 
+  font-size: 25px;
+  text-transform: capitalize;
+  padding: 40px 40px 0;
+  
+  
+}
+.card.main p {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: grey;
+  padding-left: 40px;
+  
+}
+
+.card.main div.price {
+  padding: 20px 20px;
+  max-width: clamp(200px, 80%, 500px);
+  margin-inline: auto;
+ }
+
+.card.main div.price span.currency {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card.main div.price span.amount {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.card.main div.price span.period {
+  font-size: 11px;
+ 
+}
+
+.card.main div.discount {
+  font-size: 13px;
+  padding: 10px 10px;
+  max-width: clamp(200px, 80%, 500px);
+  margin-inline: auto;
+  
+}
+
+.card.main div.discount span.badge {
+  background-color: #e3e3e3;
+  padding: 4px 6.4px;
+  border-radius: 5.6px;
+  color: black;
+ 
+}
+
+.card.main button {
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  width: clamp(160px, 70%, 200px);
+  height: clamp(40px, 5vw, 50px);
+  margin: 10px auto 10px; 
+}
+
+
+.card.main ul {
+  display: grid;
+  grid-template-columns: 1fr; /* default: 1 colonna */
+  gap: 10px 20px;
+  list-style: none;
+  text-transform: capitalize;
+  padding: 10px 0px 40px 37px;
+  
+}
+
+.card.main ul li {
+  font-size: 15px;
+}
+
+.card.main ul li i {
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+/* card main white settings*/
+
+.card.main.white  {
+  background-color: white;
+  box-shadow: 2px 2px 8px #00000033;
+  border-radius: 10px;
+}
+
+.card.main button.purple{
+  background-color: #6500ff;
+  border: none;
+  color: white;
+}
+
+/* card main purple settings*/
+
+.card.main.purple {
+  background-color: #6500ff;
+  color: white;
+  border-radius: 10px;
+ 
+}
+
+.card.main.purple p { 
+  color: white;
+   
+}
+.card.main button.gray{
+  background-color: #ffffff;
+  border: none;
+  color:#6500ff;
+}
+
+
+/*media query order card main */
+
+@media (max-width: 640px) {
+ 
+  .card.heading,
+  .card.switch {
+    order: 0;
+   
+  }
+
+  .card.main.purple {
+    order: 1;
+    
+  }
+
+  .card.main.white {
+    order: 2;
+    
+  }
+
+}
+
+/* media query settings on tablet and desktop*/
+@media (min-width: 641px) {
+
+  .flex-columns .card {
+    flex: 1 1 calc((100% - 20px) / 2);
+  }
+
+  .card.main ul.ultimate{
+     grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 900px) {
+
+  .flex-columns .card {
+    flex: 1 1 calc((100% - 40px) / 3);
+  }
+
+  .flex-columns .card.heading {
+    flex-basis: calc(200% / 3 - 20px / 3);
+  }
+
+  .card.switch {
+    justify-content: flex-end;
+  }
+
+ .card.main ul.ultimate{
+    grid-template-columns: 1fr;
+  }
+
+  
+}
+
+
+
+/*.theme .container {
+  background-color: white;
+}
+  */
+
+
+
+
+
+/* debug */
+
+/*.debug .container {
+  border: 2px solid red;
+}
+  
+.debug .card {
+  border: 2px solid blue;
+}
+  */
